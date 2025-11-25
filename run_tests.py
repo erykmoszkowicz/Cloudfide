@@ -1,5 +1,6 @@
 from test_virtual_column import *
 
+
 all_tests = [
     test_sum_of_two_columns,
     test_multiplication_of_two_columns,

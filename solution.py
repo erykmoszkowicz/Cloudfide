@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 
+
 def add_virtual_column(df: pd.DataFrame, role: str, new_column: str) -> pd.DataFrame:
     
     # Check arguments datatypes
