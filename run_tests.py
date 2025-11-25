@@ -16,19 +16,20 @@ failed_tests = []
 # Iterate over all tests
 for test_func in all_tests:
     test_name = test_func.__name__
+
     # Passed tests
     try:
         test_func()
-        print(f"Passed: {test_name}")
+        print(f"{test_name}: passed")
         passed_count += 1
     
     # Failed tests
     except AssertionError as e:
-        print(f"Failed: {test_name}")
+        print(f"{test_name}: failed")
         failed_tests.append((test_name, e))
-
+        
     except Exception as e:
-        print(f"Error: {test_name}: {type(e).__name__}")
+        print(f"{test_name} error: {type(e).__name__}")
         failed_tests.append((test_name, e))
 
 # Number of total tests
